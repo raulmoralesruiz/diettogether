@@ -25,11 +25,15 @@ import com.diettogether.security.model.DietUser;
 import com.diettogether.security.model.dto.DietUserDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@WebFilter
+//@WebFilter
 @CrossOrigin(origins = "*")
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 	
 	private static AuthenticationManager authenticationManager;
+	
+	
+//	public void init() throws ServletException {
+//	}
 	
 	public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
